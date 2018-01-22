@@ -55,12 +55,19 @@ app.get('/about', (req, res) => {
 
 
 // bad
-
 app.get('/bad', (req, res) => {
     res.send({
         error: 'bad request'
     });
 });
+
+// projects
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'Projects Page'
+    });
+});
+
 
 // start of server
 app.listen(port, () => {
